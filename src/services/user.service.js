@@ -1,3 +1,4 @@
+
 let url = 'https://jsonplaceholder.typicode.com/users'
 const getUsers = () => {
    return  fetch(url)
@@ -9,5 +10,4 @@ const getUser = (id) => {
         .then(value => value.json())
 }
 
-export {getUsers}
-export  {getUser}
+export {getUsers, getUser}
