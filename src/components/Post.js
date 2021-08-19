@@ -1,7 +1,9 @@
-export default function Post() {
+export default function Post({item}) {
   return (
     <div>
-    Post
+
+        <p> Item: {item.title}</p>
+
 
     </div>
   );
