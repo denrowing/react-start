@@ -1,8 +1,15 @@
+import Users from "./components/Users";
+
 export default function App() {
   return (
     <div>
-    App
+      <Users/>
 
     </div>
   );
 }
+
+
+// 1
+// Отримати всі user з jsonplaceholder та вивести їх. до кожного user зробити кнопку при натисканні якої виводиться всі пости поточного юзера в межах Users компоненти
+// State lifting + events task
