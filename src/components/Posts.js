@@ -1,19 +1,19 @@
 import {useEffect, useState} from "react";
-import {getPostsOfUsers} from "../services/posts.service";
+import {getPostsOfUser, getPostsOfUsers} from "../services/posts.service";
 import Post from "./Post";
 
 export default function Posts() {
 
   let [posts, setPosts] = useState([])
   useEffect(() => {
-    getPostsOfUsers().then(value => setPosts([...value]))
+      getPostsOfUser().then(value => setPosts([...value]))
   }, [])
 
   return (
     <div>
       <div>
         {
-          posts.map(value => <Post key={value.id} item={value}/>)
+          posts.map((value, index) => <Post key={index} item={value}/>)
         }
       </div>
       <div> </div>
