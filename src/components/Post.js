@@ -1,9 +1,13 @@
-export default function Post({item}) {
+export default function Post({item, chosePost}) {
+
+    const onClickPostChose = () => {
+        chosePost(item)
+    }
+
   return (
     <div>
-        {
-            <p> Item: {item.title}</p>
-        }
+      {item.id} - {item.title}
+      <button onClick={onClickPostChose}> details </button>
 
     </div>
   );

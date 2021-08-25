@@ -1,0 +1,15 @@
+.wrap {
+    display: flex;
+}
+
+.wrap > div {
+    width: 47%;
+}
+
+.posts-box {
+    background: silver;
+}
+
+.chosen-one {
+    background: cornsilk;
+}
