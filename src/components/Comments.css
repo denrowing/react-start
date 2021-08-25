@@ -1,0 +1,15 @@
+.wrap {
+    display: flex;
+}
+
+.wrap > div {
+    width: 47%;
+}
+
+.comments-box {
+    background: silver;
+}
+
+.chosen-one {
+    background: burlywood;
+}
