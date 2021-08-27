@@ -1,0 +1,11 @@
+.wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: burlywood;
+    height: 70px;
+}
+
+.wrap a {
+    background: silver;
+}
