@@ -7,17 +7,21 @@ import {
 } from "react-router-dom"
 
 import Cars from "./components/Cars";
+import Form from "./components/Form";
 
 export default function App() {
   return (
     <div>
     <Router>
-      <Link to={'/'}>to home Page</Link>
-      <Link to={'/cars'}>to Cars</Link>
-      <Link to={'/cars'}>to Cars</Link>
+      <div className={}>
+        <Link to={'/'}>to home Page</Link>
+        <Link to={'/cars'}>to Cars</Link>
+        <Link to={'/create-car'}>Create Cars</Link>
+      </div>
+
 
       <Route path={'/cars'} component={Cars}/>
-      <Route path={'/create-car'} component={Car}/>
+      <Route path={'/create-car'} component={Form}/>
 
     </Router>
 
