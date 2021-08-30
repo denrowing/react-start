@@ -13,7 +13,6 @@ export default function Cars() {
       {
         cars.map(value => <Car key={value.id} car={value}/>)
       }
-
     </div>
   );
 }

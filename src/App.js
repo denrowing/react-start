@@ -8,12 +8,13 @@ import {
 
 import Cars from "./components/Cars";
 import Form from "./components/Form";
+import "./App.css"
 
 export default function App() {
   return (
     <div>
     <Router>
-      <div className={}>
+      <div className={'wrap'}>
         <Link to={'/'}>to home Page</Link>
         <Link to={'/cars'}>to Cars</Link>
         <Link to={'/create-car'}>Create Cars</Link>
