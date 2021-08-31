@@ -1,11 +1,25 @@
+import {
+  BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    withRouter
+} from "react-router-dom"
 import Users from "./components/Users";
+import StaticUserDetails from "./components/StaticUserDetails";
+
 
 export default function App() {
   return (
-    <div>
-   <Users/>
+      <Router>
+          <div>
+             <Link to={'/users'}>users Page</Link>
 
-    </div>
+          </div>
+          <Route path={'/users'} component={Users}/>
+
+      </Router>
+
   );
 }
 
