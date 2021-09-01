@@ -1,4 +1,3 @@
-import Users from "./components/Users";
 import {
   BrowserRouter as Router,
     Switch,
@@ -6,7 +5,10 @@ import {
     Link,
     withRouter
 } from "react-router-dom"
-import StaticUserDetails from "./components/StaticUserDetails";
+import StaticUserDetails from "./components/users/StaticUserDetails";
+
+import Users from "./components/users/Users";
+import Posts from "./components/posts/Posts";
 
 
 export default function App() {
@@ -15,9 +17,15 @@ export default function App() {
 <Router>
 
     <div>
+      <Link to={'/'}>default page</Link>
+    <br/>
         <Link to={'/users'}>users page</Link>
+      <br/>
+      <Link to={'/posts'}>posts page</Link>
     </div>
-<Route path={'/users'} component={Users}/>
+
+  <Route path={'/users'} component={Users}/>
+  <Route path={'/posts'} component={Posts}/>
 
 </Router>
 

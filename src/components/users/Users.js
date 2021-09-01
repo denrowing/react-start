@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import User from "./User";
-import {getUsers} from "../servisec/user.api";
+import {getUsers} from "../../servisec/user.api";
 import StaticUserDetails from "./StaticUserDetails";
 import {Route} from "react-router-dom";
 import UserDetails from "./UserDetails";

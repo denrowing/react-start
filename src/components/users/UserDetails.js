@@ -1,6 +1,6 @@
 import {useParams} from "react-router";
 import {useEffect, useState} from "react";
-import {getUser} from "../servisec/user.api";
+import {getUser} from "../../servisec/user.api";
 
 export default function UserDetails({history, match:{params:{id}}}) { //
   // let {id: userId} = useParams('id')

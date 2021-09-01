@@ -12,8 +12,8 @@ export default function User({item, history}) {
   }
   return (
     <div>
-      {/*{item.name} - <Link to={{pathname: '/users/' + item.id, state: item}}>user static details</Link>*/}
-      {/*{item.name} - <Link to={{pathname: '/users/' + item.id}}>user static details</Link>*/}
+      {/*{item.name} - <Link to={{pathname: '/users/' + item.id, state: item}}>users static details</Link>*/}
+      {/*{item.name} - <Link to={{pathname: '/users/' + item.id}}>users static details</Link>*/}
       {item.name} - <button onClick={navigate}>user static details programmatically</button>
 
     </div>
