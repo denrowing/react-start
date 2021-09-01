@@ -6,6 +6,7 @@ import {
     withRouter
 } from "react-router-dom";
 import Users from "./components/users/Users";
+import Posts from "./components/posts/Posts";
 
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
                   <Link to={'/'}>to Home Page</Link>
                   <br/>
                   <Link to={'/users-page'}>to users Page</Link>
+                  <br/>
                   <Link to={'/posts-page'}>to posts Page</Link>
                   {/*<Link to={'/comments-page'}>to comments Page</Link>*/}
 
