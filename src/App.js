@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Users from "./components/users/Users";
 import Posts from "./components/posts/Posts";
+import Comments from "./components/comments/Comments";
 
 
 export default function App() {
@@ -18,11 +19,12 @@ export default function App() {
                   <Link to={'/users-page'}>to users Page</Link>
                   <br/>
                   <Link to={'/posts-page'}>to posts Page</Link>
-                  {/*<Link to={'/comments-page'}>to comments Page</Link>*/}
+                  <br/>
+                  <Link to={'/comments-page'}>to comments Page</Link>
 
             <Route path={'/users-page'} component={Users}/>
             <Route path={'/posts-page'} component={Posts}/>
-            {/*<Route path={'/comments-page'} component={Comments}/>*/}
+            <Route path={'/comments-page'} component={Comments}/>
 
           </div>
       </Router>
