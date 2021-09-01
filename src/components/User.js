@@ -5,15 +5,17 @@ import {
     Link,
     withRouter
 } from "react-router-dom"
-import UserDetails from "./UserDetails";
 
-export default function User({item}) {
-
+export default function User({item, history}) {
+  let navigate = () => {
+    history.push('/users/' + item.id)
+  }
   return (
     <div>
-        {/*{item.name} - <Link to={{pathname: '/users/' + item.id, state: item}}>user static details</Link>*/}
-      {item.name} - <Link to={{pathname: '/users/' + item.id}}>user static details</Link>
-{/*<Route path={'/users/' + item.id} component={UserDetails}/>*/}
+      {/*{item.name} - <Link to={{pathname: '/users/' + item.id, state: item}}>user static details</Link>*/}
+      {/*{item.name} - <Link to={{pathname: '/users/' + item.id}}>user static details</Link>*/}
+      {item.name} - <button onClick={navigate}>user static details programmatically</button>
+
     </div>
   );
 }

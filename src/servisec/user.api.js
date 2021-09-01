@@ -5,8 +5,9 @@ const getUsers = () => {
       .then(value => value.json())
 }
 
-
 const getUser = (id) => {
   return fetch(url + '/' + id)
+      .then(value => value.json())
 }
-export{getUsers, getUser}
+
+export {getUsers, getUser}
