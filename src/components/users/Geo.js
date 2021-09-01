@@ -1,8 +1,8 @@
-export default function Geo() {
+export default function Geo({geo}) {
   return (
     <div>
-    Geo
-
+      lat: {geo.lat} <br/>
+      lng: {geo.lng} <br/>
     </div>
   );
 }

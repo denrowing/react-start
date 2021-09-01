@@ -1,19 +1,23 @@
-import Address from "./Address";
 import Company from "./Company";
-
-export default function User({item}) {
-  return (
-    <div>
-      id: {item.id} <br/>
-      name: {item.name} <br/>
-      username: {item.username} <br/>
-      email: {item.email} <br/>
-      <Address/> <br/>
-      {item.phone} <br/>
-      {item.website} <br/>
-      <Company/> <br/>
+import Address from "./Address";
 
 
-    </div>
-  );
+export default function User({item: userItem}) {
+    let {address, company} = userItem
+
+    return (
+        <div>
+            <p>id: {userItem.id}</p>
+            <p>name: {userItem.name}</p>
+            <p>username: {userItem.username}</p>
+            <p>email: {userItem.email}</p>
+            <p>address: </p>
+            <Address address={address}/>
+            <p>phone: {userItem.phone}</p>
+            <p>website: {userItem.website}</p>
+            <p>company:</p>
+            <Company company={company}/>
+            <hr/>
+        </div>
+    );
 }

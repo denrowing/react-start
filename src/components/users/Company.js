@@ -1,7 +1,9 @@
-export default function Company() {
+export default function Company({company}) {
   return (
     <div>
-    Company
+      name: {company.name} <br/>
+      catchPrase: {company.catchPhrase} <br/>
+      bs: {company.bs} <br/>
 
     </div>
   );
