@@ -1,8 +1,10 @@
-export default function StaticUserDetails({location: state}) {
-  console.log(state);
+export default function StaticUserDetails({location: {state}}) {
+  // console.log(state);
   return (
     <div>
-      {JSON.stringify(state)}
+      userId: {JSON.stringify(state.userId)}
+      <br/>
+     body: {JSON.stringify(state.body)}
 
     </div>
   );
