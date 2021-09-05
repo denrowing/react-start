@@ -1,12 +1,35 @@
-import React from 'react';
+ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createStore} from 'redux'
+ import {Provider} from 'react-redux'
+
+
+const initialState = {
+    counterValue: 0
+}
+const counterReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'INCREASE': {
+            return {...state, counterValue: state.counterValue + 10}
+        }
+        case 'DECREASE': {
+            return {...state, counterValue: state.counterValue - 2}
+        }
+        default:
+            return state
+    }
+ }
+
+ const store = createStore(counterReducer)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Provider store={store}>
+          <App />
+      </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
