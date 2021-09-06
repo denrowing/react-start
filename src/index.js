@@ -8,28 +8,29 @@ import {createStore} from 'redux'
 import {Provider} from "react-redux";
 
 const initialState = {
-    counterValue: {a:0,b:0,c:0}
+    a:0,b:0,c:0
 }
 
 const counterReducer = (state = initialState, action) => {
+    // console.log(action, state)
     switch (action.type) {
         case 'INC A': {
-            return {...state, counterValue: state.counterValue.a + 1}
+            return {...state, a: state.a + 1}
         }
         case 'DEC A': {
-            return {...state, counterValue: state.counterValue.a - 1}
+            return {...state, a: state.a - 1}
         }
         case 'INC B': {
-            return {...state, counterValue: state.counterValue.b + 2}
+            return {...state, b: state.b + 2}
         }
         case 'DEC B': {
-            return {...state, counterValue: state.counterValue.b - 2}
+            return {...state, b: state.b - 2}
         }
         case 'INC C': {
-            return {...state, counterValue: state.counterValue.c + 5}
+            return {...state, c: state.c + 5}
         }
         case 'DEC C': {
-            return {...state, counterValue: state.counterValue.c - 5}
+            return {...state, c: state.c - 5}
         }
         default:
             return state
@@ -38,10 +39,19 @@ const counterReducer = (state = initialState, action) => {
 
 let store = createStore(counterReducer)
 
+// console.log('not from subscribe', store.getState());
+//
+// store.dispatch({
+//     type: 'INC A'
+// })
+// store.dispatch({
+//     type: 'INC A'
+// })
+
 ReactDOM.render(
   <React.StrictMode>
-      <Provider store={store}>
-    <App />
+          <Provider store={store}>
+                <App />
           </Provider>
   </React.StrictMode>,
   document.getElementById('root')
