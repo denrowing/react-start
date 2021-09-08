@@ -16,18 +16,16 @@ const reducer = (state = initialState, action) => {
             return {...state, users: [...action.payload]}
         }
         case ADD_USER:
-        let newUser = action.payload;
-        let newUserArray = [...state.users, newUser]
-        {
-            return {...state, users: [action.payload]}
-        }
+          let newUser = action.payload;
+          let newUserArray = [...state.users, newUser]
+            return {...state, users: [...newUserArray]}
         default:
             return state;
     }
 }
 let store = createStore(reducer, applyMiddleware(ReduxThunk))
-store.dispatch(loadUsers([]))
-store.dispatch(addUser({}))
+// store.dispatch(loadUsers([]))
+// store.dispatch(addUser({}))
 
 ReactDOM.render(
   <React.StrictMode>
