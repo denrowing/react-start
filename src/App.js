@@ -1,14 +1,11 @@
-import {useEffect} from "react";
-import {discoverMovie} from "./servise/moveServise";
+import Header from "./components/Header";
 
 export default function App() {
-  useEffect(() => {
-    discoverMovie().then(value => console.log(value.data.results))
-  }, [])
+
   return (
       <div>
          <header>
-
+            <Header/>
          </header>
       </div>
   );
